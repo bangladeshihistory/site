@@ -25,14 +25,14 @@ router.post('/send', function (req, res) {
             senderName: req.body.name,
             message: req.body.message,
             senderEmail: req.body.email,
-            name: 'Sajjad Hossain'
+            name: 'Bangladeshi Historical Memorial Project'
         });
         // setup e-mail data with unicode symbols
         var mailOptions = {
             from: gmail.auth.email,
             to: req.body.email,
             bcc: gmail.auth.email,
-            subject: 'Website Submission to Sajjad Hossain',
+            subject: 'Website Submission to Bangladeshi Historical Memorial Project',
             text: 'Name: ' + req.body.name + ' Email: ' + req.body.email + ' Message: ' + req.body.message,
             html: html
         };
