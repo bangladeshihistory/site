@@ -12,7 +12,7 @@ section#upcoming
                             i.material-icons.right send
                             | Contact
                 .row.remove-margin-bottom.padding-bottom
-                    .col.m6.s12
+                    .col.m8.s12
                         h3 Events
                         .row.remove-margin-bottom.valign-wrapper
                         for event in events
@@ -30,12 +30,12 @@ section#upcoming
                                         | #{description}
                                 .card-action.right-align
                                     a(href='#') #{date}
-                    .col.m6.s12
+                    .col.m4.s12
                         .row.remove-margin-bottom.valign-wrapper
-                            .col.s2.valign
-                                a.waves-effect.waves-light.btn.btn-floating(href!= 'http://twitter.com/' + tweeter, target='_blank') @
                             .col.s10.valign
                                 h3 Twitter
+                            .col.s2.valign.right-align
+                                a.waves-effect.waves-light.btn.btn-floating(href!= 'http://twitter.com/' + tweeter, target='_blank') @
                         a.twitter-timeline(data-dnt='true',data-tweet-limit="3" ,href='https://twitter.com/bangladeshistry',data-chrome='noheader noborders transparent' , data-widget-id='696477616530964482') Tweets by @bangladeshistry
                         script.
                             !function (d, s, id) {
