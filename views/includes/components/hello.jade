@@ -1,0 +1,20 @@
+- var message = false
+div.row
+    div#footer-form.col.s12
+        form#contact(method = 'post', action = 'contact/send')
+            div.row.padding-top
+                p.form-group.input-field.col.s12
+                    label
+                        span.contact-form-labels Name*
+                    input#name.form-control(type='text', name = 'name', placeholder='Wasfia Nazreen')
+                p.form-group.input-field.col.s12
+                    label
+                        span.contact-form-labels Email*
+                    input#email.form-control(type='email', name = 'email' placeholder='wnazreen@nationalgeographicfoundation.org')
+                p.form-group.input-field.col.s12
+                    label
+                        span.contact-form-labels Message
+                    textarea#message.form-control.validate.materialize-textarea.contact-form-values(value='' placeholder='Hi. I am very interested in becoming involved with your movement. Please reach me via email!' name='message' type='textarea', required, message=true)
+            div(class='right')
+                    button#submit(type='submit').btn-large Submit
+                        i.material-icons.left send
