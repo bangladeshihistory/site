@@ -1,7 +1,7 @@
 console.log('Welcome fellow developer or Web Inspector connoisseur.');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Contact me via sajjad@withpulp.com.');
-    console.log('Fork me from https://github.com/sajjadhossain/resume-builder.');
+    console.log('Fork me from https://github.com/sajjadhossain');
     // Smooth scroll https://css-tricks.com/snippets/jquery/smooth-scrolling/
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {

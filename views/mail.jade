@@ -8,25 +8,12 @@ html(xmlns='http://www.w3.org/1999/xhtml')
         link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css')
         link(href='http://fonts.googleapis.com/css?family=Exo+2:300italic,100italic,200italic,200,900italic,300,400,100,400italic,900' rel='stylesheet' type='text/css')
 block content
-    div(class='row')
-        div(class='col s12')
-            div(class='valign-wrapper')
-                div(class='row valign')
-                    div(style='width: 75%')
-                        div(class='card')
-                            div(class='card-image')
-                                img(src= 'http://bangladeshihistory.com/images/maghrib.jpg')
-                                h1.truncate
-                                    span(class='card-title heavy-font') Meet Maghrib
-                            div(class='card-content')
-                                p(class='flow-text padding-top') Thanks for reaching out!
-                                blockquote #{message}
-                                p #{senderName} #{senderEmail}
-                                br
-                                p(class='flow-text padding-top') Well, now that you have my information, you can have your people set something up with my people. ;) I'll reply as soon as I get the chance. But in the meanwhile, let me introduce a dear friend of mine.
-                                p(class='flow-text padding-top') This is Maghrib <span class="small" style="font-style:italic"> (maġrib).</span> He loves the heated space atop my laptop keyboard. <strong>Fun Fact:</strong> The picture above captures him in a position we at <a href="http://www.withpulp.com">With Pulp</a> call "Cat Loaf". :D
-                                br
-                                p(class='flow-text padding-top') Look forward to speaking to you!
-                                div(class='right-align')
-                                    p(class='padding-top') Best,
-                                    p #{name}
+    .row
+        .col.s12
+            .container
+                p.flow-text.padding-top Thanks for reaching out!
+                blockquote #{message}
+                p.padding-bottom #{senderName} #{senderEmail}
+                p.flow-text.padding-top Thank you for your submission to join The Bangladeshi Historical Memory Project!
+                p.flow-text.padding-top Have you followed us on <a href='http://twitter.com/@bangladeshihistry'>Twitter</a> and <a href='http://www.facebook.com/bangladeshihistory'>Facebook</a>?
+                p.flow-text.padding-top We will be getting back to you soon!
