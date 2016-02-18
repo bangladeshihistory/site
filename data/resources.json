@@ -1,0 +1,21 @@
+{
+  "0": {
+    "name": "Learning Bangla Resource Guide NYC",
+    "description": "A curated list of Bangladeshi authored literature, compiled by Jordan Alam, Nafisa Ferdous & Sharmin Hossain.",
+    "link": "/documents/LearningBanglaResourceGuideNYC.pdf",
+    "image": "images/banners/one.jpg"
+  },
+  "1": {
+    "name": "Islamophobia 101 by Sharmin Hossain",
+    "description": "Participants will be able to understand how the status quo of American racism sheds light on the history of Islamophobia.",
+    "link": "/documents/Islamophobia101bySharminHossain.pdf",
+    "image": "images/banners/two.jpg"
+  },
+  "2": {
+    "name": "Bengali Social Justice Vocabulary",
+    "description": "Words translated and transliterated in Bengali for those organizing Bangladeshi communities.",
+    "link": "/documents/BengaliSocialJusticeVocabulary.pdf",
+    "image": "images/banners/three.jpg"
+  }
+}
+

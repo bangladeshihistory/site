@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
     var main = require('../index');
     //var twitterData = require(main.data + '/tweets.json');
     var events = require(main.data + '/events.json');
+    var posts = require(main.data + '/events.json');
+    var resources = require(main.data + '/events.json');
 
     //// Twitter data
     //var tweets = {};
@@ -65,9 +67,11 @@ router.get('/', function(req, res, next) {
     // Render with tweets and grams
     res.render('index',
         {
-            title: 'Bangladeshi Historical Memorial Project',
+            title: 'Bangladeshi Historical Memory Project',
             //tweets: tweetsMainData,
             events: events,
+            posts: posts,
+            resources: resources,
             tweeter: 'bangladeshihistry',
             instagrammer: 'bangladeshihistory'
         }
