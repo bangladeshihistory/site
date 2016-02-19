@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
     var main = require('../index');
     //var twitterData = require(main.data + '/tweets.json');
     var events = require(main.data + '/events.json');
-    var posts = require(main.data + '/events.json');
-    var resources = require(main.data + '/events.json');
+    var posts = require(main.data + '/posts.json');
+    var resources = require(main.data + '/resources.json');
 
     //// Twitter data
     //var tweets = {};

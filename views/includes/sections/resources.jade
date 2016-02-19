@@ -5,41 +5,21 @@ section#resources
         .col.s12
             .container
                 h2 Resources
-                // List of Posts
+                // List of resources
                 .row.remove-margin-bottom.padding-bottom
-                    #post-one
-                        .col.s12.m4
-                            .card
+                    for resource in resources
+                        - var name = resource.name;
+                        - var link = resource.link;
+                        - var description = resource.description;
+                        - var image = resource.image;
+                        .col.s12.m6
+                            .card.white
                                 .card-image
-                                    img(src='images/banners/one.jpg')
-                                    h5.card-title
-                                        | Learning Bangla Resource Guide NYC
+                                    img(src!= image)
+                                    h5.card-title.text-stroke
+                                        | #{name}
                                 .card-content
                                     p
-                                        | A curated list of Bangladeshi authored literature, compiled by Jordan Alam, Nafisa Ferdous & Sharmin Hossain.
-                                .card-action
-                                    a(href='documents/LearningBanglaResourceGuideNYC.pdf', target='_blank') Read Now
-                    #post-two
-                        .col.s12.m4
-                            .card
-                                .card-image
-                                    img(src='images/banners/two.jpg')
-                                    h5.card-title
-                                        | Islamophobia 101
-                                .card-content
-                                    p
-                                        | Participants will be able to understand how the status quo of American racism sheds light on the history of Islamophobia.
-                                .card-action
-                                    a(href='documents/Islamophobia101bySharminHossain.pdf', target='_blank') Read Now
-                    #post-three
-                        .col.s12.m4
-                            .card
-                                .card-image
-                                    img(src='images/banners/three.jpg')
-                                    h5.card-title
-                                        | Bengali Social Justice Vocabulary
-                                .card-content
-                                    p
-                                        | Words translated and transliterated in Bengali for those organizing Bangladeshi communities.
-                                .card-action
-                                    a(href='documents/BengaliSocialJusticeVocabulary.pdf', target='_blank') Read Now
+                                        | #{description}
+                                .card-action.right-align
+                                    a(href!= link) READ NOW

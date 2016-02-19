@@ -1,7 +1,7 @@
 {
   "0": {
     "name": "Learning Bangla Resource Guide NYC",
-    "description": "A curated list of Bangladeshi authored literature, compiled by Jordan Alam, Nafisa Ferdous & Sharmin Hossain.",
+    "description": "Want to learn Bangla? A New York City based Resource Guide by Shahana Hanif.",
     "link": "/documents/LearningBanglaResourceGuideNYC.pdf",
     "image": "images/banners/one.jpg"
   },
@@ -16,6 +16,12 @@
     "description": "Words translated and transliterated in Bengali for those organizing Bangladeshi communities.",
     "link": "/documents/BengaliSocialJusticeVocabulary.pdf",
     "image": "images/banners/three.jpg"
+  },
+  "3": {
+    "name": "Bangladeshi Literature & Texts",
+    "description": "A curated list of Bangladeshi authored literature, compiled by Jordan Alam, Nafisa Ferdous & Sharmin Hossain.",
+    "link": "/documents/BangladeshiLiteratureAndTexts.pdf",
+    "image": "images/banners/five.jpg"
   }
 }
 
