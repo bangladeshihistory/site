@@ -1,18 +1,20 @@
-extends layout
-block content
-    include includes/components/navbar
-    include includes/sections/landing
-    #site
-        include includes/sections/mission
-        include includes/sections/more
-        include includes/sections/facts
-        include includes/sections/updates
-        include includes/sections/resources
-        include includes/sections/author
-        include includes/common/footer
-        include includes/components/menu
-    // SCRIPTS
-    script(src='javascripts/vendor/classie.js')
-    script(src='javascripts/vendor/menu.js')
-    script(src='javascripts/vendor/materialize.min.js')
-    script(src='javascripts/vendor/init.js')
+doctype html
+html(lang='en')
+    extends layout
+    block content
+        include includes/components/navbar
+        include includes/sections/landing
+        #site
+            include includes/sections/mission
+            include includes/sections/more
+            include includes/sections/facts
+            include includes/sections/updates
+            include includes/sections/resources
+            include includes/sections/author
+            include includes/common/footer
+            include includes/components/menu
+        // SCRIPTS
+        script(src='javascripts/vendor/classie.js')
+        script(src='javascripts/vendor/menu.js')
+        script(src='javascripts/vendor/materialize.min.js')
+        script(src='javascripts/vendor/init.js')
