@@ -1,25 +1,25 @@
 // Stories
 section#resources
-.stories
-    .row.remove-margin-bottom
-        .col.s12
-            .container
-                h2 Resources
-                // List of resources
-                .row.remove-margin-bottom.padding-bottom
-                    for resource in resources
-                        - var name = resource.name;
-                        - var link = resource.link;
-                        - var description = resource.description;
-                        - var image = resource.image;
-                        .col.s12.m6
-                            .card.white
-                                .card-image
-                                    img(src!= image)
-                                    h5.card-title.text-stroke
-                                        | #{name}
-                                .card-content
-                                    p
-                                        | #{description}
-                                .card-action.right-align
-                                    a(href!= link) READ NOW
+    .resources
+        .row.remove-margin-bottom
+            .col.s12
+                .container
+                    h2 Resources
+                    // List of resources
+                    .row.remove-margin-bottom.padding-bottom
+                        for resource in resources
+                            - var name = resource.name;
+                            - var link = resource.link;
+                            - var description = resource.description;
+                            - var image = resource.image;
+                            .col.s12.m6
+                                .card.white
+                                    .card-image
+                                        img(src!= image)
+                                        h5.card-title.text-stroke
+                                            | #{name}
+                                    .card-content
+                                        p
+                                            | #{description}
+                                    .card-action.right-align
+                                        a(href!= link) READ NOW
