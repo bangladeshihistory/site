@@ -143,6 +143,12 @@ blockquote {
     padding-top: 10px;
 }
 
+.modal {
+    /*max-height: 100%;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*top: 0 !important;*/
+}
 
 .padding-bottom {
     padding-bottom: 30px;
@@ -207,6 +213,11 @@ blockquote {
 /* Author */
 .author {
     background-color: #424242;
+}
+
+/* Upcoming */
+.upcoming {
+    background-color: #A5D6A7;
 }
 
 /* Resources */

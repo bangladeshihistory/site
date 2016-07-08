@@ -1,5 +1,7 @@
 console.log('Welcome fellow developer or Web Inspector connoisseur.');
 document.addEventListener('DOMContentLoaded', function() {
+    $('#featuredEvent').openModal();
+    $('.modal-trigger').leanModal();
     console.log('Contact me via sajjad@withpulp.com.');
     console.log('Fork me from https://github.com/sajjadhossain');
     // Smooth scroll https://css-tricks.com/snippets/jquery/smooth-scrolling/
