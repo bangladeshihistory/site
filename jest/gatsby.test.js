@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer'
 let browser
 let page
 
-describe('Gatsby installation', () => {
+describe('Gatsby installation', async () => {
   browser = await puppeteer.launch(
     {
       headless: false,
@@ -12,7 +12,7 @@ describe('Gatsby installation', () => {
     }
   )
   page = await browser.newPage()
-  
+
   beforeAll(async () => {
     await page.goto(server.baseUrl)
   })
