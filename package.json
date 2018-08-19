@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "metaterran",
+  "description": "GatsbyJS portfolio, to be hosted on a Linode, orchestrated pipeline with Vagrant and CircleCI. Tested with CypressIO and Jest BDD",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "sajjad hossain",
   "dependencies": {
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
@@ -14,13 +14,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/.bin/cypress run --headed",
+    "test": "./node_modules/.bin/jest",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "jest": "^23.5.0",
+    "jest-puppeteer": "^3.3.1",
+    "prettier": "^1.13.7",
+    "puppeteer": "^1.7.0"
   },
   "repository": {
     "type": "git",
