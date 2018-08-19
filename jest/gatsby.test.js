@@ -8,7 +8,7 @@ describe('Gatsby installation', () => {
   it('should have a #___gatsby element', async () => {
     browser = await puppeteer.launch(
       {
-        headless: false,
+        headless: true,
         slowMo: 100,
       }
     )
