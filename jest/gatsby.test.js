@@ -5,14 +5,15 @@ let browser
 let page
 
 describe('Gatsby installation', () => {
+  browser = await puppeteer.launch(
+    {
+      headless: false,
+      slowMo: 100,
+    }
+  )
+  page = await browser.newPage()
+  
   beforeAll(async () => {
-    browser = await puppeteer.launch(
-      {
-        headless: false,
-        slowMo: 100,
-      }
-    )
-    page = await browser.newPage()
     await page.goto(server.baseUrl)
   })
 
