@@ -14,10 +14,6 @@ beforeAll(async () => {
   page = await browser.newPage()
 })
 
-afterAll(async () => {
-  await browser.close();
-})
-
 describe('Gatsby installation', () => {
   beforeAll(async () => {
     await page.goto(server.baseUrl)
@@ -25,5 +21,6 @@ describe('Gatsby installation', () => {
 
   it('should have a #___gatsby element', async () => {
     await page.waitForSelector('#___gatsby')
+    await browser.close();
   })
 })
