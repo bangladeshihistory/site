@@ -17,6 +17,7 @@
     "test": "./node_modules/.bin/jest",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {

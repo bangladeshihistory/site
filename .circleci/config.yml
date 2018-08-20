@@ -22,8 +22,17 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: Install dependencies
+          command: npm install
 
+      - run:
+          name: Build /public
+          command: npm run build
+
+      - run:
+          name: Serve application on localhost:9000
+          command: 'npm run serve'
       - run:
           name: Workaround for GoogleChrome/puppeteer#290
           command: 'sh .circleci/setup_puppeteer.sh'
@@ -34,4 +43,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm run test
+      - run:
+          name: Run jest tests
+          command: npm run test
