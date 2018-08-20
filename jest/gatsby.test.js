@@ -10,6 +10,6 @@ describe('Gatsby installation', () => {
     await page.goto(server.baseUrl);
     await page.waitForSelector('#___gatsby')
 
-    await browser.close();
+    await browser.close(done);
   });
 })
