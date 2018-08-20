@@ -4,7 +4,7 @@ jest.setTimeout(30000)
 describe('Gatsby installation', () => {
   const puppeteer = require('puppeteer');
 
-  it('should have a #___gatsby element', async () => {
+  it('should have a #___gatsby element', async (done) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(server.baseUrl);
