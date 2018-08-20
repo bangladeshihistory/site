@@ -8,8 +8,9 @@ describe('Gatsby installation', () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(server.baseUrl);
-    await page.waitForSelector('#___gatsby')
+    await page.waitForSelector('#___gatsby');
 
-    await browser.close(done);
+    await browser.close();
+    done();
   });
 })
