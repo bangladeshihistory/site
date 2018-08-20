@@ -27,15 +27,16 @@ jobs:
           command: npm install
 
       - run:
+          name: Workaround for GoogleChrome/puppeteer#290
+          command: 'sh .circleci/setup_puppeteer.sh'
+
+      - run:
           name: Build /public
           command: npm run build
 
       - run:
           name: Serve application on localhost:9000
-          command: 'npm run serve'
-      - run:
-          name: Workaround for GoogleChrome/puppeteer#290
-          command: 'sh .circleci/setup_puppeteer.sh'
+          command: 'npm run serve && exit 0'
 
       - save_cache:
           paths:
