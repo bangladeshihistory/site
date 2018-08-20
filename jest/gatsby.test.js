@@ -1,4 +1,5 @@
 const server = require('./jest-puppeteer.config').server;
+jest.setTimeout(30000)
 
 describe('Gatsby installation', () => {
   const puppeteer = require('puppeteer');
