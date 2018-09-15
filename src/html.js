@@ -30,6 +30,9 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
+          <link href="utils/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+          <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
@@ -40,6 +43,9 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script src="utils/vendor/jquery/jquery.min.js"></script>
+          <script src="utils/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="utils/js/clean-blog.min.js"></script>
         </body>
       </html>
     )
