@@ -1,60 +1,67 @@
 ---
 layout: post
+intro: false
 featured: false
-title:  "SQL Cheat Sheet"
-description: "Structured Query Language is a special-purpose programming language designed for managing data held in a relational database management system (RDBMS)."
-banner: "http://localhost:4000/images/posts/banners/sql.jpg"
+title:  "SQL Query Guide"
+uniqueID:  "sqlCheatSheet"
+description: "Structured Query Language is a programming language designed to create, read, update and delete data from a relational database."
+banner: "/images/posts/sql.jpg"
 date:   2014-09-01 10:55:54
-tags: mysql sql database query
+tags: ['mysql', 'sql', 'database', 'query']
 ---
 
-###What is it?
-Structured Query Language is a special-purpose programming language designed for managing data held in a relational database management system (RDBMS).
+## Querying
 
-####Why is it important?
-As a QA Engineer, the need to verify data-sets and their relation within various applications is critical. You simply need to know that an action or predefined method is storing, requesting, deleting and editing the expected set of data, CRUD. 
+As a QA Engineer, the need to verify data-sets and their relation within various applications is critical. You simply need to know that an action or predefined method is storing, requesting, deleting and editing the expected set of data, CRUD.
 
 Get this into your head first. Declarative. The only paradigm where you "just" declare the nature of the results that you would like to get. Not how your computer shall compute those results. Isn't that wonderful?
 
 i.e.
 
-	SELECT first_name, last_name FROM employees WHERE salary > 100000
-	
+```sql
+SELECT
+  first_name, last_name
+FROM
+  employees
+WHERE
+  salary > 100000
+```
 Easy to understand. You don't care where employee records physically come from. You just want those that have a decent salary.
 
-###SQL syntax is not "well-ordered"
+## SQL syntax is not well-ordered
+
 A common source of confusion is the simple fact that SQL syntax elements are not ordered in the way they are executed. The lexical ordering is:
 
-* SELECT [ DISTINCT ]
-* FROM
-* WHERE
-* GROUP BY
-* HAVING
-* UNION
-* ORDER BY
+* `SELECT`
+* `FROM`
+* `WHERE`
+* `GROUP BY`
+* `HAVING`
+* `UNION`
+* `ORDER BY`
 
 For simplicity, not all SQL clauses are listed. This lexical ordering differs fundamentally from the logical order, i.e. from the order of execution:
 
-* FROM
-* WHERE
-* GROUP BY
-* HAVING
-* SELECT
-* DISTINCT
-* UNION
-* ORDER BY
+* `FROM`
+* `WHERE`
+* `GROUP BY`
+* `HAVING`
+* `SELECT`
+* `DISTINCT`
+* `UNION`
+* `ORDER BY`
 
-There are three things to note:
+##### There are 3 things to note:
 
-1. FROM is the first clause, not SELECT. The first thing that happens is loading data from the disk into memory, in order to operate on such data.
-2. SELECT is executed after most other clauses. Most importantly, after FROM and GROUP BY. This is important to understand when you think you can reference stuff that you declare in the SELECT clause from the WHERE clause. 
-3. UNION is placed before ORDER BY in both lexical and logical ordering. Many people think that each UNION subselect can be ordered, but according to the SQL standard and most SQL dialects, that is not true. While some dialects allow for ordering subqueries or derived tables, there is no guarantee that such ordering will be retained after a UNION operation.
+1. `FROM` is the first clause, not `SELECT`. The first thing that happens is loading data from the disk into memory, in order to operate on such data.
+2. `SELECT` is executed after most other clauses. Most importantly, after `FROM` and `GROUP BY`. This is important to understand when you think you can reference stuff that you declare in the `SELECT` clause from the `WHERE` clause.
+3. `UNION` is placed before `ORDER BY` in both lexical and logical ordering. Many people think that each `UNION` sub-select can be ordered, but according to the SQL standard and most SQL dialects, that is not true. While some dialects allow for ordering subqueries or derived tables, there is no guarantee that such ordering will be retained after a `UNION` operation.
 
 *Note, not all databases implement things the same way. Rule number 2, for instance, does not apply exactly in the above way to MySQL, PostgreSQL, and SQLite.*
 
 Always remember both the lexical order and the logical order of SQL clauses to avoid very common mistakes. If you understand that distinction, it will become very obvious why some things work and others don't.
 
-###Cheat Sheet
+## Cheat Sheet
 
 | Declarative | Purpose |
 | --- | --- |
@@ -67,95 +74,182 @@ Always remember both the lexical order and the logical order of SQL clauses to a
 | OPERATOR | Operates with value (=x) |
 | VALUES | always passed in quotes 'x' |
 
-#### Examples
+### Examples
 
-##### SELECT
+#### `SELECT`
 
-    SELECT column_name(s)
-    FROM table_name
-    
-    SELECT * (select all columns from table)
-    FROM table_name
-    
-    SELECT DISTINCT column_name(s)
-    FROM table_name
+Specific column:
 
-DISTINCT displays selected distinct columns within a table, i.e. Users listed by state:
+```sql
+SELECT
+  column_name1, column_name2
+FROM
+  table_name
+```
 
-	SELECT DISTINCT state
-	FROM user_id
+All columns from table:
 
-#####WHERE
+```sql
+SELECT
+  *
+FROM
+  table_name
+```
 
-	SELECT column_name(s)
-	FROM table_name
-	WHERE column_name [operator] [x]
+Select distinct, the various kinds of entries:
 
-SELECT all within a table with a certain column value, i.e. Users from California:
+```sql
+SELECT DISTINCT
+  column_name
+FROM
+  table_name
+```
 
-	SELECT * (all) FROM user_id
-	WHERE State ='California')
+`DISTINCT` displays selected distinct columns within a table, i.e. Users listed by state:
 
-Operators allowed with 'WHERE':
+```sql
+SELECT DISTINCT
+  state
+FROM
+  user_id
+```
+#### `WHERE`
 
-	= EQUAL
-	< > NOT EQUAL
-	> GREATER THAN
-	< LESS THAN
-	> = GREATER THAN OR EQUAL
-	< = LESS THAN OR EQUAL
-	BETWEEN, between a range
-	LIKE, search for pattern
-	IN, exact value
+```sql
+SELECT
+  column_name(s)
+FROM
+  table_name
+WHERE
+  column_name [operator] [x]
+```
+
+`SELECT` all within a table with a certain column value, i.e. Users from California:
+
+```sql
+SELECT
+  *
+FROM
+  user_id
+WHERE
+  State ='California'
+```
+
+Operators allowed with `WHERE`:
+
+* `=` EQUAL
+* `< >` NOT EQUAL
+* `>` GREATER THAN
+* `<` LESS THAN
+* `>` = GREATER THAN OR EQUAL
+* `<` = LESS THAN OR EQUAL
+* `BETWEEN`, between a range
+* `LIKE`, search for pattern
+* `IN`, exact value
 
 
-#####AND
+#### `AND`
 
-	SELECT * FROM table_name
-	WHERE column_name [operator] [value]
-	AND column_name [operator] [value]
-	AND column_name [operator] [value]
+```sql
+SELECT
+  *
+FROM
+  table_name
+WHERE
+  column_name [operator] [value]
+  AND
+    column_name [operator] [value]
+  AND
+    column_name [operator] [value]
+```
 
-#####OR
+#### `OR`
 
-	SELECT * FROM table_name
-	WHERE column_name [operator] [value]
-	OR column_name [operator] [value]
-	OR column_name [operator] [value]
+```sql
+SELECT
+  *
+FROM
+  table_name
+WHERE
+  column_name [operator] [value]
+  OR
+    column_name [operator] [value]
+  OR
+    column_name [operator] [value]
+```
 
-#####AND/OR
+#### `AND` / `OR`
 
-	SELECT * FROM table_name WHERE 
+```sql
+SELECT
+  *
+FROM
+  table_name
+WHERE
 	column_name [operator] [value]
-	AND (column_name [operator] [value] OR column_name [operator] [value])
-	AND (column_name [operator] [value] OR column_name [operator] [value])
+  AND
+    (column_name [operator] [value] OR column_name [operator] [value])
+  AND
+    (column_name [operator] [value] OR column_name [operator] [value])
+```
 
-#####ORDER
-	
-	SELECT column_name(s)
-	FROM table_name
-	ORDER BY colum_name(s) [asc/desc]
+#### `ORDER BY`
 
-	SELECT * FROM user_id
-	ORDER BY State asc
+```sql
+SELECT
+  column_name(s)
+FROM
+  table_name
+ORDER BY
+  column_name(s) [asc/desc]
+```
 
-#####INSERT
+```sql
+SELECT
+  *
+FROM
+  user_id
+ORDER BY
+  State asc
+```
+#### `INSERT`
 
-	INSERT INTO table_name
-	VALUES (value, value, value)
-
+```sql
+INSERT INTO
+  table_name
+VALUES
+  (value, value, value)
+```
 Limit columns added:
 
-	INSERT INTO table_name (column_name, column_name...)
-	VALUES (value, value, value)
+```sql
+INSERT INTO
+  table_name (column_name, column_name...)
+VALUES
+  (value, value, value)
+```
 
-#####UPDATE
+#### `UPDATE`
 
-	UPDATE table_name
-	SET column_name [operator] [value], column_name [operator] [value]
-	WHERE column_name [operator] [value] AND column_name [operator] [value]
+```sql
+UPDATE
+  table_name
+SET
+  column_name [operator] [value], column_name [operator] [value]
+WHERE
+  column_name [operator] [value]
+  AND
+  column_name [operator] [value]
+```
+#### `DELETE`
 
-#####DELETE
-
-	DELETE * (all) FROM table_name
-	WHERE column_name [operator] [value] AND column_name [operator] [value]
+```sql
+DELETE
+  *
+FROM
+  table_name
+WHERE
+  column_name [operator] [value]
+  AND
+  column_name [operator] [value]
+```

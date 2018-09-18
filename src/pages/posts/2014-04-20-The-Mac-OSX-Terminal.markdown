@@ -1,15 +1,17 @@
 ---
 layout: post
-intro: false
+intro: true
 featured: false
-title: "The Mac OS X Terminal"
-description: "The OSX command prompt is a place where you can type commands to manipulate files on your computer or launch programs that perform complex tasks."
-banner: "http://localhost:4000/images/posts/banners/terminal.jpg"
+title: "Bash & Terminal"
+uniqueID: "bashAndTerminal"
+description: "The OSX terminal is where you use bash commands to perform any task that can be achieved using GUI."
+banner: "/images/posts/bash.jpg"
 date: 2014-04-20 06:30:22
-tags: osx terminal bash shell
+tags: [ "osx", "terminal", "bash", "shell" ]
+reference: 'http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/'
 ---
 
-## What is it?
+## OSX Terminal
 
 The OSX command prompt is a place where you can type commands to manipulate files on your computer or launch programs that perform complex tasks.
 
@@ -23,24 +25,30 @@ Writing a program for the command prompt is much easier than writing a program w
 Hold down the `⌘` key and press `space`. In the spotlight prompt, enter `Terminal`. Under Applications, you should see a `Terminal` application. Open it.
 
 
-When its open, hold ⌘ and press N at the same time (`⌘ + N`). In the new window, you should see `yourMacBookUser$`. 
+When its open, hold ⌘ and press N at the same time (`⌘ + N`). In the new window, you should see `yourMacBookUser$`.
 
 In my Terminal, I see:
 
-	~ shossain$
-	
+```bash
+~ shossain$
+```
+
 The prompt begins with a series of words and symbols and ends with the dollar symbol.
 
 By default on OSX, the first word is the name of your computer. In my case, my computer is named `batBook`. Your computer name is probably something different. You can change your computer’s name by clicking the `Edit` button under `Computer Name` in `System Preferences` > `Sharing`.
 
 On the prompt, after the computer name, is a colon and then the current working directory. The working directory is the folder where commands that you enter on the command prompt will be executed. The word directory is programmer speak for folder. To see the full path of the current working directory at any time, you can type:
 
-	pwd
-	
+```bash
+pwd
+```
+
 Followed by the `Enter` key. `pwd` stands for Print Working Directory. If you were to type this at the command prompt now you would see something like:
 
-	/Users/shossain
-	
+```bash
+/Users/shossain
+```
+
 Which happens to be the full path to your home folder. By default when you open a new Terminal window on OSX the working directory will be set to your home folder. The current user’s home folder has a shorthand on the command prompt: the tilde character (`~`). This is why you currently see the tilde in the prompt itself.
 
 The last word of the prompt (before the dollar sign) is your OSX username. In my case my username is `shossain`.
@@ -51,19 +59,23 @@ Let’s cover a couple of basic commands.
 
 You can see the files in the current directory with the `ls` command. Give it a try. Type:
 
-	ls
+```bash
+ls
+```
 
 Followed by the `Enter` key. You should see something like the following output:
 
-	Applications/
-	Desktop/
-	Documents/
-	Downloads/
-	Library/
-	Sites/
-	Pictures/
-	Music/
-	Movies/
+```bash
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Sites/
+Pictures/
+Music/
+Movies/
+```
 
 Think of `ls` is short for list. Or, list the files in the current folder. Folders are shown with a trailing slash character (`/`). Files are shown with their full file name. In this case, “Hello World.doc” includes the file extension “.doc”.
 
@@ -72,21 +84,29 @@ You can change the working directory with the cd command. The `cd` command stand
 
 Let’s give it a try. Type:
 
-	cd Documents
+```bash
+cd Documents
+```
 
 And press `Enter`. The `cd` command takes one “argument”. An argument is a string of characters that the command operates on. In this case, we pass the cd command the name of the new working directory.
 
 Let’s use the `pwd` command that we learned above to see if that worked. Type:
 
-	pwd
+```bash
+pwd
+```
 
 and press `Enter`. You should now see something like:
 
-	/Users/shossain/Documents
+```bash
+/Users/shossain/Documents
+```
 
 Stellar! We are moving around. This is just like double clicking on a folder in Finder. Also note how the prompt has changed:
 
-	~/Documents shossain$
+```bash
+~/Documents shossain$
+```
 
 It now shows the new directory that we are currently in (Documents).
 
@@ -95,35 +115,49 @@ There is another shortcut that is helpful when navigating folders with the comma
 
 For example if you are in your home directory:
 
-	cd ~
-	
+```bash
+cd ~
+```
+
 In most cases `~` refers to the home directory. So my directory after `pwd` is:
 
-	/Users/shossain
+```bash
+/Users/shossain
+```
 
 Now if you type:
 
-	cd ..
+```bash
+cd ..
+```
 
 And then:
 
-	pwd
+```bash
+pwd
+```
 
 You should see, be in:
 
-	/Users
+```bash
+/Users
+```
 
 ### Paths
 
 You can also use a full path in the cd command. For instance, typing:
 
-	cd /Applications/Utilities
+```bash
+cd /Applications/Utilities
+```
 
 Will change the current directory to the `Applications` > `Utilities folder`.
 
 You should notice that folders in a path are separated by slashes `/` — much like URLs. To get to the root directory for the computer, you only need to type:
 
-	cd /
+```bash
+cd /
+```
 
 The root directory is the topmost, or highest folder. When you go here, it’s like navigating all the way up to your hard drive (“Macintosh HD”) in Finder.
 
@@ -131,7 +165,9 @@ Paths that begin with a slash `/` are absolute paths. Absolute paths are relativ
 
 This is true in all cases, except one. If you begin a path with a tilde (`~`) it is always assumed to be relative to the current user’s home directory. So typing:
 
-	cd ~/Documents
+```bash
+cd ~/Documents
+```
 
 Will switch to the current user’s Documents folder.
 
@@ -141,27 +177,39 @@ If you need to switch back to a directory that you were just in there is another
 
 So if you are in your Documents directory:
 
-	cd ~/Documents
+```bash
+cd ~/Documents
+```
 
 And you switch over to the Applications directory for a second:
 
-	cd /Applications
+```bash
+cd /Applications
+```
 
 You can return to the Documents directory by typing:
 
-	cd -
+```bash
+cd -
+```
 
 Now the `pwd` command will reveal:
 
-	/Users/shossain/Documents
+```bash
+/Users/shossain/Documents
+```
 
 And here’s the kicker: the dash always refers to the previous working directory. So if you type it one more time:
 
-	cd -
+```bash
+cd -
+```
 
 The `pwd` command will reveal:
 
-	/Applications
+```bash
+/Applications
+```
 
 Typing it again would put you back in your Documents directory. And so on…
 
@@ -173,15 +221,22 @@ The modern command prompt allows you to type the first few letters of a file or 
 
 For example, if you are in your home directory:
 
-	cd ~
+```bash
+cd ~
+```
 
 And you type:
 
-	cd Doc (Tab)
+```bash
+cd Doc (Tab)
+```
 
 It will automatically complete the word for you so that it becomes:
 
-	cd Documents
+
+```bash
+cd Documents
+```
 
 Pretty nifty, eh?
 
@@ -189,11 +244,15 @@ But what happens when there is more than one possibility for completion? You sho
 
 So typing:
 
-	cd Do (Tab) (Tab)
+```bash
+cd Do (Tab) (Tab)
+```
 
 Would output:
 
-	Documents/ Downloads/
+```bash
+Documents/ Downloads/
+```
 
 You could then add a `c` to narrow the completion possibilities to “Documents” and press `Tab` again to complete it. Give it a try to see what I mean.
 
@@ -201,11 +260,15 @@ But tab completion isn’t just limited to file names and directories. You can a
 
 For example, if you typed:
 
-	who (Tab) (Tab)
+```bash
+who (Tab) (Tab)
+```
 
 You would see:
 
-	who  whoami  whois
+```bash
+who  whoami  whois
+```
 
 This is because there are three commands that begin with “who”: `who`, `whoami`, and `whois`.
 
@@ -217,13 +280,17 @@ There are a couple of ways to get help on a specific command. The first is to pa
 
 So if you needed to get help on the gem command, you could type:
 
-	gem --help
+```ruby
+gem --help
+```
 
 This will output a help message that will include a description and usage information about the program:
 
 If a program or command doesn’t respond to one of the help flags, you can sometimes get help using the man command. In fact, the man command will generally yield much more comprehensive documentation on a command than a help flag. man is a kind of digital manual for your computer. To use it, simply pass the name of the command that you would like help with as the first argument. For example, you can type:
 
-	man mkdir
+```bash
+man mkdir
+```
 
 To reveal the “man” page for the `mkdir` command (the `mkdir` command allows you to create new directories). There are a number of other commands that can be used to find help information on specific commands and programs, including `info` and `apropos`, use `man` to find out more about them.
 
@@ -242,6 +309,3 @@ OSX ships with literally hundreds of commands and programs that run on the comma
 | rmdir | Removes a directory (a folder). Again, be careful. Directories deleted with this command do not go to the Trash. They are deleted immediately. |
 
 Again, use `man` to learn more about each command.
-
-Credit: [reference](http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/)
-

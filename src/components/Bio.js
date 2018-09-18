@@ -26,6 +26,9 @@ class Bio extends React.Component {
             height: rhythm(2),
           }}
         />
+        <p>I am an engineer by day.</p>
+        <p>By night, I dismantle poor user interfaces, bug-ridden frameworks, and un-scalable solutions.</p>
+        <p>I follow the latest standards in W3C HTML, CSS, and Javascript development and believe in clean and minimal code.</p>
         <p>
           Written by <strong>Kyle Mathews</strong> who lives and works in San
           Francisco building useful things.{' '}
