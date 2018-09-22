@@ -1,3 +1,9 @@
-# 🚀 metaterran
+# gatsby-starter-blog
+Gatsby starter for creating a blog
 
-GatsbyJS portfolio, to be hosted on a Linode, orchestrated pipeline with Vagrant and CircleCI. Tested with CypressIO and Jest BDD.
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+
+## Running in development
+`gatsby develop`
