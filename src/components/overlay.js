@@ -18,7 +18,7 @@ class Overlay extends React.Component {
             <div className='col-lg-8 col-md-10 mx-auto'>
               <div
                 className='site-heading'>
-                <h1>Thoughts</h1>
+                <h1>Tech.</h1>
                 <span className='subheading'>
                   A <a href='https://www.gatsbyjs.org' target='blank'>GatsbyJS</a> blog,
                   hosted on <a href='https://www.linode.com/' target='blank'>Linode</a>,

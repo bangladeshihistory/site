@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Thoughts',
+    title: 'Tech.',
     author: 'Sajjad Hossain',
     name: 'metaterran',
     description: 'A GatsbyJS blog, hosted on Linode, shipped in a Vagrant, built with CircleCI, and tested with Jest BDD.',
-    siteUrl: 'http://thoughts.metaterran.com',
+    siteUrl: 'http://tech.metaterran.com',
   },
   pathPrefix: '/metaterran',
   plugins: [
