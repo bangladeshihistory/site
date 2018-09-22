@@ -36,7 +36,7 @@ jobs:
 
       - run:
           name: Serve application on localhost:9000
-          command: 'npm run serve'
+          command: npm run serve
           background: true
 
       - save_cache:
