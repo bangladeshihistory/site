@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import About from './about'
 
-import { scale } from '../utils/typography'
+import typography from '../utils/typography'
+
+const scale = typography.scale
 
 class Navbar extends React.Component {
   render() {
@@ -10,12 +13,11 @@ class Navbar extends React.Component {
         className='navbar fixed-top'
         id='mainNav'
       >
-        <div
-            className='nav-item'
-          >
+        <div className='nav-item'>
             <h1
               style={{
-                ...scale(1),
+                marginTop: '.8rem',
+                marginLeft: '.5rem'
               }}
             >
               <Link
@@ -30,12 +32,11 @@ class Navbar extends React.Component {
               </Link>
             </h1>
           </div>
-        <div
-          className='nav-item'
-        >
+        <div className='nav-item'>
           <h1
             style={{
-              ...scale(1),
+              marginTop: '.8rem',
+              marginRight: '.5rem'
             }}
           >
             <Link
@@ -44,13 +45,16 @@ class Navbar extends React.Component {
                 textDecoration: 'none',
                 color: 'inherit',
               }}
-              to='/about'
-              >
-              👨‍🚀
+              to='#about'
+              data-toggle='modal'
+              data-target='#about'
+            >
+              👨🏾‍🚀
             </Link>
           </h1>
         </div>
       </nav>
+
     )
   }
 }

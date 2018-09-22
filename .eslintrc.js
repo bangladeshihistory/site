@@ -7,6 +7,7 @@ module.exports = {
     "react",
   ],
   "globals": {
+    "jestPuppeteer": true,
     "graphql": false,
   },
   "parserOptions": {

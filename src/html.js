@@ -1,53 +1,45 @@
-import React from "react"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
-  } catch (e) {
-    console.log(e)
-  }
-}
-
-module.exports = class HTML extends React.Component {
+export default class HTML extends React.Component {
   render() {
-    let css
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      )
-    }
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta charSet='utf-8' />
+          <meta httpEquiv='x-ua-compatible' content='ie=edge' />
           <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name='viewport'
+            content='width=device-width, initial-scale=1, shrink-to-fit=no'
           />
+          <link rel='stylesheet' type='text/css' href='vendor/fontawesome-free/css/all.min.css'></link>
+          <link rel='stylesheet' type='text/css' href='vendor/bootstrap/css/bootstrap.css'></link>
+          <link rel='stylesheet' type='text/css' href='vendor/bootstrap/css/clean-blog.css'></link>
           {this.props.headComponents}
-          <link href="utils/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-          <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-          <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-          {css}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div
-            key={`body`}
-            id="___gatsby"
+            key={'body'}
+            id='___gatsby'
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="utils/vendor/jquery/jquery.min.js"></script>
-          <script src="utils/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-          <script src="utils/js/clean-blog.min.js"></script>
+          <script src='/vendor/jquery/jquery.min.js'></script>
+          <script src='/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+          <script src='/js/prism.js'></script>
+          <script src='/js/clean-blog.js'></script>
         </body>
       </html>
     )
   }
+}
+
+HTML.propTypes = {
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
 }

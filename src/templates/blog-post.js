@@ -1,10 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
-import { rhythm, scale } from '../utils/typography'
+import Layout from '../components/layout'
+
+import typography from '../utils/typography'
+
 const backgroundUrl = (path) => {
   const prefix = 'url('
   const suffix = ')'
@@ -12,19 +14,18 @@ const backgroundUrl = (path) => {
   return prefix + path + suffix
 }
 
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const { previous, next } = this.props.pathContext
+    const { previous, next } = this.props.pageContext
     let intro
     let tags = []
     let prefix
     let suffix
 
     for(let i = 0; i < post.frontmatter.tags.length; i += 1) {
-      tags.push(<span key={i} className="badge badge-secondary margin-right">{post.frontmatter.tags[i]}</span>)
+      tags.push(<span key={i} className="badge margin-right">{post.frontmatter.tags[i]}</span>)
     }
 
     if (post.frontmatter.intro === true) {
@@ -80,58 +81,58 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <div id='blogPost'>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        {intro}
-        <div
-          className='padding-top container'
-        >
+      <Layout location={this.props.location}>
+        <div id='blogPost'>
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          {intro}
           <div
-            className='row'
+            className='padding-top container'
           >
-            <div className='col-lg-8 col-md-10 mx-auto'>
-              <br/>
-              <article id={post.frontmatter.uniqueID} className='margin-top-bottom'>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              </article>
+            <div
+              className='row'
+            >
+              <div className='col-lg-8 col-md-10 mx-auto'>
+                <br/>
+                <article id={post.frontmatter.uniqueID} className='margin-top-bottom'>
+                  <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                </article>
+              </div>
+            </div>
+          </div>
+          <div id='nextPreviousArticles' className='margin-top-bottom container'>
+            <div className='row'>
+              <div className='col-sm-12 mx-auto text-center'>
+                {
+                  previous &&
+                  <Link
+                    style={{
+                      boxShadow: 'none',
+                    }}
+                    to={previous.fields.slug}
+                    rel="prev"
+                  >
+                    <small>← {previous.frontmatter.title}</small>
+                  </Link>
+                }
+              </div>
+              <div className='col-sm-12 mx-auto text-center'>
+                {
+                  next &&
+                  <Link
+                    style={{
+                      boxShadow: 'none',
+                    }}
+                    to={next.fields.slug}
+                    rel="next"
+                  >
+                    <small>{next.frontmatter.title} →</small>
+                  </Link>
+                }
+              </div>
             </div>
           </div>
         </div>
-        <div id='nextPreviousArticles' className='margin-top-bottom container'>
-          <div className='row'>
-            <div className='col-sm-12 mx-auto text-center'>
-              {
-                previous &&
-                <Link
-                  style={{
-                    boxShadow: 'none',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                  to={previous.fields.slug}
-                  rel="prev"
-                >
-                  <small>← {previous.frontmatter.title}</small>
-                </Link>
-              }
-            </div>
-            <div className='col-sm-12 mx-auto text-center'>
-              {
-                next &&
-                <Link
-                  style={{
-                    boxShadow: 'none',
-                  }}
-                  to={next.fields.slug}
-                  rel="next"
-                >
-                  <small>{next.frontmatter.title} →</small>
-                </Link>
-              }
-            </div>
-          </div>
-        </div>
-      </div>
+      </Layout>
     )
   }
 }
@@ -148,15 +149,16 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
+      excerpt
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        uniqueID
-        description
-        banner
-        tags
-        intro
+          date(formatString: "MMMM DD, YYYY")
+          uniqueID
+          description
+          banner
+          tags
+          intro
       }
     }
   }

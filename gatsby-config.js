@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Stories',
+    title: 'Thoughts',
     author: 'Sajjad Hossain',
     name: 'metaterran',
-    description: 'GatsbyJS blog, hosted on Linode, orchestrated Vagrant and CircleCI pipeline. Tested with Jest BDD.',
-    siteUrl: 'http://stories.metaterran.com',
+    description: 'A GatsbyJS blog, hosted on Linode, shipped in a Vagrant, built with CircleCI, and tested with Jest BDD.',
+    siteUrl: 'http://thoughts.metaterran.com',
   },
   pathPrefix: '/metaterran',
   plugins: [
@@ -16,19 +16,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-            },
-          },
-        ]
-      }
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -52,6 +43,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -61,13 +53,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        pathToConfigModule: 'src/utils/typography',
+        name: `metaterran`,
+        short_name: `metaterran`,
+        start_url: `/`
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 }

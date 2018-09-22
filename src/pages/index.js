@@ -1,34 +1,39 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteDescription = get(this, 'props.data.site.siteMetadata.description')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <div>
-        <Helmet title={siteTitle} />
-        <div className='container'>
+      <Layout location={this.props.location}>
+        <Helmet
+          htmlAttributes={{ lang: 'en' }}
+          meta={[{ name: 'description', content: siteDescription }]}
+          title={siteTitle}
+        />
+        <div className='container padding-top'>
           <div className='row'>
             <div className='col-lg-8 col-md-10 mx-auto'>
               {posts.map(({ node }) => {
-                const title = get(node, 'frontmatter.title') || node.fields.slug
+                const title = get(node, 'frontmatter.shortName') || node.frontmatter.title
                 let tags = []
                 let prefix
                 let suffix
                 let postsList
 
                 for(let i = 0; i < node.frontmatter.tags.length; i += 1) {
-                  tags.push(<span key={i} className="badge badge-secondary margin-right">{node.frontmatter.tags[i]}</span>)
+                  tags.push(<span key={i} className='badge badge-secondary margin-right'>{node.frontmatter.tags[i]}</span>)
                 }
 
                 if(node.frontmatter.featured === false) {
                   postsList = (
                     <div className='margin-top-bottom post-preview'>
-                      <br/>
                       <Link
                         style={{ boxShadow: 'none' }}
                         to={node.fields.slug}
@@ -37,17 +42,15 @@ class BlogIndex extends React.Component {
                           <h2 className='post-title'>
                             {title}
                           </h2>
-                          {tags}
-                          <br />
-                          <small className='post-meta'>{node.frontmatter.date}</small>
+                          <h4 className='post-subtitle'>
+                            {node.frontmatter.title}
+                          </h4>
                           <p className='post-subtitle'>
                             {node.frontmatter.description}
                           </p>
-                          <div className='three-dots'>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
+                          {tags}
+                          <br />
+                          <small className='post-meta'>{node.frontmatter.date}</small>
                         </article>
                       </Link>
                     </div>
@@ -63,7 +66,7 @@ class BlogIndex extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
@@ -71,10 +74,11 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query {
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -89,6 +93,7 @@ export const pageQuery = graphql`
             title
             uniqueID
             description
+            shortName
             layout
             featured
             banner
