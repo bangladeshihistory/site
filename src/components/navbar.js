@@ -17,7 +17,7 @@ class Navbar extends React.Component {
             <h1
               style={{
                 marginTop: '.8rem',
-                marginLeft: '.5rem'
+                marginLeft: '.3rem'
               }}
             >
               <Link

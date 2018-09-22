@@ -46,11 +46,7 @@ class About extends React.Component {
                 <div className='container'>
                   <div className='row'>
                     <div className='col-lg-8 col-md-10 col-sm-12 mx-auto text-center'>
-                      <h1
-                        style={{
-                          fontSize: '5rem'
-                        }}
-                      >👨🏾‍💻</h1>
+                      <h1>👨🏾‍💻</h1>
                       <h2>Sajjad Hossain</h2>
                       <p>
                         I am an engineer by day.

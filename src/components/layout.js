@@ -31,11 +31,6 @@ class Template extends React.Component {
             className='margin-top-bottom'
             id='postsList'
           >
-            <div className='padding-top three-dots'>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
             {children}
           </section>
         </div>

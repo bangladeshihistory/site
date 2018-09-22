@@ -359,19 +359,6 @@ header.masthead .post-heading .meta a {
   }
 }
 
-.three-dots {
-  text-align: center;
-}
-
-.three-dots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #212529;
-  display: inline-block;
-  margin: 0 5px;
-}
-
 .one-dot {
   text-align: center;
 }
