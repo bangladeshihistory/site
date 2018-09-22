@@ -30,11 +30,11 @@ The steps below should resemble inspecting elements on **any** browser. You can 
 
 6. Explore the mark up. For instance, I'm gonna choose to inspect the header video from Google:
 
-  <img src="/images/posts/inspect_elements/google.png">
+  <div class="text-center"><img width="250px" src="/images/posts/inspect_elements/google.png"></div>
 
   I can inspect this by right-clicking on the item, or element, and selecting `Inspect`. And I would see:
 
-  <img src="/images/posts/inspect_elements/inspected.png">  
+  <div class="text-center"><img width="250px" src="/images/posts/inspect_elements/inspected.png"></div>
 
 The below is telling me that the header video is contained in a `div`. This information and feature is important because it allows me as a developer to debug my application. As a test engineer, this functionality allows me to map out dependancies for my application.
 

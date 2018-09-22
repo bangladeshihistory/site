@@ -1,5 +1,4 @@
 ---
-layout: post
 intro: false
 featured: false
 title: "Testing APIs with JMeter"
@@ -9,7 +8,6 @@ shortName: "🔐"
 banner: ""
 date: 2015-09-20 06:30:22
 tags: [ "jmeter", "testing", "api", "charles" ]
-reference: 'http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/'
 ---
 
 ## JMeter
@@ -71,7 +69,7 @@ You should see a bunch of files downloading. Go through the above steps and star
 
 JMeter, locally, should look like:  
 
-![Smaller icon](http://4.bp.blogspot.com/-yMoHp5V2BsE/T-oewRnXeII/AAAAAAAABrA/XXb44Y7jLcg/s1600/jmeter.png)
+<div class="text-center"><img width="250px" src="http://4.bp.blogspot.com/-yMoHp5V2BsE/T-oewRnXeII/AAAAAAAABrA/XXb44Y7jLcg/s1600/jmeter.png"></div>
 
 ### JMeter Documentation
 
