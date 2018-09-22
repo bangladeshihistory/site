@@ -12,9 +12,10 @@ export default class HTML extends React.Component {
             name='viewport'
             content='width=device-width, initial-scale=1, shrink-to-fit=no'
           />
-          <link rel='stylesheet' type='text/css' href='vendor/fontawesome-free/css/all.min.css'></link>
-          <link rel='stylesheet' type='text/css' href='vendor/bootstrap/css/bootstrap.css'></link>
-          <link rel='stylesheet' type='text/css' href='vendor/bootstrap/css/clean-blog.css'></link>
+          <link rel='stylesheet' type='text/css' href='/vendor/bootstrap/css/bootstrap.css'></link>
+          <link rel='stylesheet' type='text/css' href='/vendor/bootstrap/css/clean-blog.css'></link>
+          <link rel='stylesheet' type='text/css' href='/vendor/fontawesome-free/css/all.min.css'></link>
+          <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"></link>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
