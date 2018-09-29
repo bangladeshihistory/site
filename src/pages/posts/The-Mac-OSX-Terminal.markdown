@@ -1,6 +1,6 @@
 ---
 intro: true
-featured: true
+featured: false
 title: "Bash and OSX Terminal"
 uniqueID: "bashAndTheTerminal"
 description: "The OSX terminal is where you use bash commands to perform actions in your operating system. Understanding your OS is the first layer to programming."

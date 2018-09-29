@@ -48,11 +48,11 @@ class About extends React.Component {
                     <div className='col-lg-8 col-md-10 col-sm-12 mx-auto text-center'>
                       <h1>👨🏾‍💻</h1>
                       <h2>Sajjad Hossain</h2>
-                      <p>
+                      <small>
                         I am an engineer by day.
                         By night, I dismantle poor user interfaces, bug-ridden frameworks, and un-scalable solutions.
                         I follow the latest standards in W3C HTML, CSS, and Javascript development and believe in clean and minimal code.
-                      </p>
+                      </small>
                     </div>
                   </div>
                 </div>

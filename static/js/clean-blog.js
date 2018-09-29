@@ -7,10 +7,10 @@
   window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      document.getElementById('mainNav').style.transition = 'all 0.5s ease 0s';
+      document.getElementById('mainNav').style.transition = 'all 0.25s ease 0s';
       document.getElementById('mainNav').style.top = '0';
     } else {
-      document.getElementById('mainNav').style.transition = 'all 0.5s ease 0s';
+      document.getElementById('mainNav').style.transition = 'all 0.25s ease 0s';
       document.getElementById('mainNav').style.top = '-105px';
     }
     prevScrollpos = currentScrollPos;
