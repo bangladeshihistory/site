@@ -1,5 +1,5 @@
 ---
-featured: false
+featured: true
 intro: true
 title:  "Automation with WebDriverIO"
 uniqueID: "automationWithWebdriverIO"
@@ -19,7 +19,7 @@ New to JavaScript? New to coding? Automated testing? Not a problem. I am sure th
 1. Download [NodeJS](https://nodejs.org/en/download/)
 2. Download [NPM](https://www.npmjs.com/package/npm)
 
-Given you've installed the aforementioned requirements, go to your project. My project for instance is this Node application: [http://sajjad.nyc](http://sajjad.nyc). It doesn't matter what your directory looks like or what files or scripts help run your application.
+Given you've installed the aforementioned requirements, go to your project. My project for instance is this application: [blog.sajjad.nyc](http://blog.sajjad.nyc). It doesn't matter what your directory looks like or what files or scripts help run your application.
 
 From the root of the project, if your project is **not an npm project**, run `npm init`. You should see a prompt like this:
 

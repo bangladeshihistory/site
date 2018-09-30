@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 class ErrorPage extends React.Component {
   render() {
@@ -10,6 +11,18 @@ class ErrorPage extends React.Component {
         }}>
         <div className='row'>
           <div className='col-lg-8 col-md-10 mx-auto'>
+            <h1>
+              <a
+                style={{
+                  boxShadow: 'none',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+                href='http://tech.sajjad.nyc'
+              >
+                🏠
+              </a>
+            </h1>
             <h1 style={{
               color: '#dc3545'
             }}>

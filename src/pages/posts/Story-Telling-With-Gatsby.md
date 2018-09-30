@@ -25,7 +25,7 @@ After engineering my user story, I had to research and outsource a lot of my des
 
 ### Stack
 
-As a next step, I defined my stack. These are the technologies and strategies will I explored and plan to implement to achieve my mission.
+As a next step, I defined my stack. These are the technologies and strategies I explored and plan to implement to achieve my mission.
 
 #### Linode
 
@@ -39,7 +39,7 @@ So I can deploy my blog to a production instance.
 
 #### Vagrant
 
-I want to contain my application and its' dependancies in a virtual container with [Vagrant](http://vagrantup.com), so that I can reproduce and develop in a traceable fashion. This process of virtualization helps with testing a product stability. I can provision my machine with all the necessary dependancies, so that either I can access and reproduce my environment, or someone else can spin up a development environment in a short time.
+I want to contain my application and its' dependancies in a virtual container with [Vagrant](http://vagrantup.com), so that I can reproduce and develop in a traceable fashion. This process of virtualization helps with testing and product stability. I can provision my machine with all the necessary dependancies, so that either I can access and reproduce my environment, or someone else can spin up a development environment in a short time.
 
 ```gherkin
 As a developer,
@@ -82,7 +82,7 @@ This is where [GatsbyJS](http://gatsbyjs.org) comes in. Gatsby lets you build bl
 ```gherkin
 As a developer,
 I want a React blog,
-So that I can use new technology to build an SPA
+So that I can use new technology to build a SPA
 ```
 
 ##### References
@@ -110,13 +110,15 @@ So that I can quickly test my components
 
 ### Design
 
-As you can see, a bit of research went in to defining a stack that meets the needs of my project. The following design decision was made in a bit of a rush/ I chose the design and UI based on the following requirements. The blog:
+As you can see, a bit of research went in to defining a stack that meets the needs of my project. The following design decision was made in a bit of a rush. I chose the design and UI based on the following requirements.
 
-* Needs to be extremely readable
-* Needs to be strippable. I should easily be able to port the code into my framework
-* Needs to be minimal
-* Responsive
-* Mobile first
+The blog:
+
+  * needs to be extremely readable
+  * needs to be strippable. I should easily be able to port the code into my framework
+  * needs to be minimal
+  * needs to be responsive
+  * should ideally be designed mobile first
 
 After some research, I stumbled on to this `Clean Blog` design by [Bootstrap](http://getbootstrap.com).
 
@@ -133,4 +135,4 @@ So that I can implement it into my GatsbyJS blog
 
 </br>
 
-I hope this post gave you some insight into the design and implementation process.
+I hope this post gave you some insight into the design and implementation process for this blog. It took about a week to get out the door and running. It was a fun way to learn React, albeit GatsbyJS is a bit extracted from the coding-style of React.

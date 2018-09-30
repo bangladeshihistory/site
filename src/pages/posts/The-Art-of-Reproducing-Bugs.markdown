@@ -1,7 +1,7 @@
 ---
 layout: post
 intro: false
-featured: true
+featured: false
 title:  "Reproducing Bugs"
 uniqueID: "reproducingBugs"
 description: "Defining the steps to reproduce a bug or unexpected outcome of a test is a necessary skill for QA. These are some questions I ask myself when creating STRs."
