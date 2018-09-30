@@ -1,10 +1,10 @@
 ---
-featured: true
+featured: false
 intro: true
 title:  "Automation with WebDriverIO"
 uniqueID: "automationWithWebdriverIO"
 description:  "Get Node. Get npm. Install the module. Boom! Start testing anything from websites to native applications."
-shortName: "🎬 : WebdriverIO"
+shortName: "🎬"
 banner: "/images/posts/code.jpg"
 date: 2015-11-11 14:31:11
 tags: ["automation", "webdriverio", "javascript", "testing"]

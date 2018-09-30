@@ -1,0 +1,11 @@
+---
+featured: true
+intro: true
+title:  "CircleCI and Continuous Integration"
+uniqueID: "circleCIAndContinuousIntegration"
+description:  "Love to push code? Would you also love to build your application and test it when you do? I thought you might."
+shortName: "🧙‍"
+banner: "/images/posts/build.jpg"
+date: 2017-09-01
+tags: ["circleci", "CI", "docker", "pipeline"]
+---

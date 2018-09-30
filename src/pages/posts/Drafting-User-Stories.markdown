@@ -1,11 +1,11 @@
 ---
 featured: false
-intro: true
+intro: false
 title:  "Drafting User Stories"
 uniqueID: "draftingUserStories"
 description:  "When reverse engineering, the work ahead may seem very daunting. Keeping the User Story model for creating MVPs should help lessen the burden."
 shortName: "✏️"
-banner: "/images/posts/code.jpg"
+banner: ""
 date:   2015-10-25 13:22:29
 tags: ["automation", "gherkin", "cucumber"]
 ---

@@ -52,7 +52,7 @@ export default () => (
               >
                 <div className='card mb-3'>
                   <div className='card-header'>
-                    <p>⭐️</p>
+                    <h2>{node.frontmatter.shortName}</h2>
                     <h5 className='card-text'>{node.frontmatter.title}</h5>
                   </div>
                   <div className='card-body'>
