@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 intro: true
 title:  "Automation with WebDriverIO"
 uniqueID: "automationWithWebdriverIO"
