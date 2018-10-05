@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import 'variables';
+
+body {
+  font-family: $bodyFont;
+  font-size: 20px;
+  color: #212529;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
