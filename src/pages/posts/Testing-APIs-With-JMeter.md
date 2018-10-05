@@ -6,7 +6,7 @@ uniqueID: "testingAPIsWithJMeter"
 description: "As test engineers, we can use JMeter to script tests against API's, chain them so they actually resemble a real request, even make assertions against responses."
 shortName: "🔐"
 banner: ""
-date: 2015-09-20 06:30:22
+date: 2015-11-05
 tags: [ "jmeter", "testing", "api", "charles" ]
 ---
 

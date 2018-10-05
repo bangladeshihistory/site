@@ -7,7 +7,7 @@ uniqueID: "blackboxTestingAnApplication"
 description:  "Given we know how to inspect elements, reverse engineering dependencies for the application under test is our next milestone."
 shortName: "✅ "
 banner: ""
-date: 2015-02-11
+date: 2015-03-24
 tags: ["chrome", "inspect-element", "testing", "blackbox"]
 ---
 

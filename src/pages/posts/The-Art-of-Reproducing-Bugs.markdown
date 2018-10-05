@@ -7,7 +7,7 @@ uniqueID: "reproducingBugs"
 description: "Defining the steps to reproduce a bug or unexpected outcome of a test is a necessary skill for QA. These are some questions I ask myself when creating STRs."
 shortName: "🐞"
 banner: ""
-date:  2015-11-11
+date:  2015-12-21
 tags: ["quality-assurance", "bugs", "QA", "testing"]
 ---
 
