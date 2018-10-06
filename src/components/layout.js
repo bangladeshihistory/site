@@ -7,7 +7,7 @@ import Overlay from './overlay'
 
 import fontAwesome from '../../static/vendor/fontawesome-free/css/all.min.css'
 import bootstrapCSS from '../../static/vendor/bootstrap/css/bootstrap.css'
-import cleanBlogCSS from '../../static/vendor/bootstrap/css/clean-blog.css'
+import cleanBlogCSS from '../assets/styles/main.scss'
 
 class Template extends React.Component {
   render() {

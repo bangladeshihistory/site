@@ -61,6 +61,12 @@ module.exports = {
         start_url: `/`
       },
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["src/styles/main.scss"],
+      },
+    }
   ],
 }
