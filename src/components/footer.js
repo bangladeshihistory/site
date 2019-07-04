@@ -3,6 +3,9 @@ import Link from 'gatsby-link'
 
 import { scale } from '../utils/typography'
 
+const date = new Date()
+const year = date.getFullYear()
+
 class Menu extends React.Component {
   render() {
     return (
@@ -63,7 +66,7 @@ class Menu extends React.Component {
               <p
                 className='copyright text-muted'
               >
-                Built with ♥ in NYC. © 2012 - 2018, <a href='http://withpulp.com' target='blank'>WithPulp</a>
+                Built with ♥ in NYC. © {year}, <a href='http://withpulp.com' target='blank'>WithPulp</a>
               </p>
             </div>
           </div>
