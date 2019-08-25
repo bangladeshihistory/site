@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Navbar from './navbar'
+import HomeNavbar from './home-navbar'
+import PostNavbar from './post-navbar'
+import FeaturedArchive from './featured-archive'
 import Footer from './footer'
+import PostFooter from './post-footer'
 import About from './about'
+import Sharmin from './sharmin'
+import Collaborate from './collaborate'
 import Overlay from './overlay'
 
 import fontAwesome from '../../static/vendor/fontawesome-free/css/all.min.css'
@@ -17,9 +22,10 @@ class Template extends React.Component {
     let nav
 
     if (location.pathname === rootPath) {
+      console.log(children)
       nav = (
         <div id='nav'>
-          <Navbar />
+          <HomeNavbar />
         </div>
       )
       display = (
@@ -27,29 +33,34 @@ class Template extends React.Component {
           id='siteContent'
         >
           <Overlay />
-          <section
-            className='margin-top-bottom'
-            id='postsList'
-          >
-            {children}
-          </section>
+          <FeaturedArchive />
+          <About />
+          <Collaborate />
+          <Sharmin />
+          <Footer />
         </div>
       )
     }
     else {
       nav = (
         <div id='nav'>
-          <Navbar />
+          <PostNavbar />
         </div>
       )
       display = (
-        <div id='siteContent'>
+        <div
+          id='siteContent'
+        >
           <section
             id=
             'postContent'
           >
             {children}
           </section>
+          <PostFooter />
+          <Collaborate />
+          <Sharmin />
+          <Footer />
         </div>
       )
     }
@@ -57,8 +68,6 @@ class Template extends React.Component {
       <div>
         {nav}
         {display}
-        <About />
-        <Footer />
       </div>
     )
   }

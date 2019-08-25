@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tech.',
-    author: 'Sajjad Hossain',
-    name: 'metaterran',
-    description: 'A GatsbyJS blog, hosted on Linode, shipped in a Vagrant, built with CircleCI, and tested with Jest BDD.',
-    siteUrl: 'http://tech.metaterran.com',
+    title: 'Bangladeshi Historical Memory Project',
+    author: 'Sharmin Hossain',
+    name: 'bangladeshihistory',
+    description: 'A digital archive documenting Bangladeshi history, art, people, culture, lives, stories, politics, revolution and rebellion.',
+    siteUrl: 'http://bangladeshihistory.com',
   },
-  pathPrefix: '/metaterran',
+  pathPrefix: '/bangladeshihistory',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -56,8 +56,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `metaterran`,
-        short_name: `metaterran`,
+        name: `bangladeshihistory`,
+        short_name: `bangladeshihistory`,
         start_url: `/`
       },
     },

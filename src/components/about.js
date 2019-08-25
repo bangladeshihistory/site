@@ -46,13 +46,11 @@ class About extends React.Component {
                 <div className='container'>
                   <div className='row'>
                     <div className='col-lg-8 col-md-10 col-sm-12 mx-auto text-center'>
-                      <h1>👨🏾‍💻</h1>
-                      <h2>Sajjad Hossain</h2>
-                      <small>
-                        I am an engineer by day.
-                        By night, I dismantle poor user interfaces, bug-ridden frameworks, and un-scalable solutions.
-                        I follow the latest standards in W3C HTML, CSS, and Javascript development and believe in clean and minimal code.
-                      </small>
+                      <h1>✊🏾</h1>
+                      <h2>Our Mission</h2>
+                      <p>
+                        The Bangladeshi Historical Memory Project is an interactive visual and narrative based digital archive & political theater project documenting the history & resilience of Bangladeshi people. Combining historical and contemporary media, this project explores art, literature, culture, history, and revolution.
+                      </p>
                     </div>
                   </div>
                 </div>

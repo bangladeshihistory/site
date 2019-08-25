@@ -47,6 +47,9 @@ class BlogPostTemplate extends React.Component {
                   </p>
                   {tags}
                   <br />
+                  <small className='post-meta'>
+                    By: {post.frontmatter.author}
+                  </small>
                   <p id='postDate'>
                     {post.frontmatter.date}
                   </p>
@@ -155,6 +158,7 @@ export const pageQuery = graphql`
         title
           date(formatString: "MMMM DD, YYYY")
           uniqueID
+          author
           description
           banner
           tags

@@ -54,6 +54,24 @@ a:hover {
   transition: all 0.3s;
 }
 
+#postContent {
+  background: #001b12;
+  color: #FFFFFF;
+}
+
+#archive {
+  background: #001b12;
+  color: #FFFFFF;
+}
+
+#postContent a {
+  color: #FFFFFF;
+}
+
+#archive a {
+  color: #FFFFFF;
+}
+
 #spotlight a:hover {
   color: $yellowHighLight;
   text-shadow: $opaqueBlack;
@@ -520,6 +538,10 @@ footer .copyright {
 
 .padding-top {
   padding-top: 30px;
+}
+
+.padding-bottom {
+  padding-bottom: 50px;
 }
 
 footer {
