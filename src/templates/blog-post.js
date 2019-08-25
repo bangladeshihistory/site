@@ -102,7 +102,8 @@ class BlogPostTemplate extends React.Component {
               </div>
             </div>
           </div>
-          <div id='nextPreviousArticles' className='margin-top-bottom container'>
+          <div id='nextPreviousArticles' className='padding-top padding-bottom margin-top-bottom container'>
+            <h4 className='text-center'>Read More</h4>
             <div className='row'>
               <div className='col-sm-12 mx-auto text-center'>
                 {
