@@ -60,7 +60,7 @@ a:hover {
 }
 
 #archive {
-  background: #001b12;
+  background: #006747;
   color: #FFFFFF;
 }
 
@@ -68,7 +68,20 @@ a:hover {
   color: #FFFFFF;
 }
 
-#archive a {
+#resources {
+  background: #00402c;
+  color: #FFFFFF;
+}
+
+#resourcesContent a {
+  color: #FFFFFF;
+}
+
+#archive a{
+  color: #FFFFFF;
+}
+
+#resources a{
   color: #FFFFFF;
 }
 
@@ -542,6 +555,14 @@ footer .copyright {
 
 .padding-bottom {
   padding-bottom: 50px;
+}
+
+.padding-top-lite {
+  padding-top: 10px;
+}
+
+.padding-bottom-lite {
+  padding-bottom: 10px;
 }
 
 footer {

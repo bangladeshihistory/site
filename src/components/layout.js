@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import HomeNavbar from './home-navbar'
 import PostNavbar from './post-navbar'
 import FeaturedArchive from './featured-archive'
+import FeaturedResources from './featured-resources'
 import Footer from './footer'
 import PostFooter from './post-footer'
 import About from './about'
@@ -34,6 +35,7 @@ class Template extends React.Component {
         >
           <Overlay />
           <FeaturedArchive />
+          <FeaturedResources />
           <About />
           <Collaborate />
           <Sharmin />

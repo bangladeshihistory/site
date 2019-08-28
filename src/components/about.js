@@ -24,7 +24,7 @@ class About extends React.Component {
                 textDecoration: 'none',
                 color: 'inherit',
               }}
-              to='/#about'
+              to='/'
               data-dismiss='modal'
               aria-label='Close'
             >

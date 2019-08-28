@@ -14,6 +14,24 @@ class HomeNavbar extends React.Component {
         id='mainNav'
       >
         <div className='nav-item'>
+          <h1
+            style={{
+              marginTop: '.8rem',
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+              to='/'
+              data-toggle='modal'
+              data-target='/'
+            >
+              🇧🇩
+            </Link>
+          </h1>
         </div>
         <div className='nav-item'>
           <h1
@@ -27,11 +45,11 @@ class HomeNavbar extends React.Component {
                 textDecoration: 'none',
                 color: 'inherit',
               }}
-              to='#about'
+              to='/#about'
               data-toggle='modal'
               data-target='#about'
             >
-              🇧🇩
+              ℹ️
             </Link>
           </h1>
         </div>

@@ -6,9 +6,9 @@ import { scale } from '../utils/typography'
 class PostFooter extends React.Component {
   render() {
     return (
-      <div className='container padding-top'>
+      <div className='col-lg-8 col-md-10 mx-auto padding-top'>
         <div className='row'>
-          <div className='col-lg-8 col-md-10 col-sm-12 mx-auto text-center'>
+          <div className='text-center'>
             <h1>✊🏾</h1>
             <h2>Our Mission</h2>
             <p>

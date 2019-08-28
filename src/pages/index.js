@@ -90,14 +90,10 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
+            link
             title
-            uniqueID
             author
             type
-            description
-            shortName
-            featured
-            banner
             tags
           }
         }
