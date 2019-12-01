@@ -23,7 +23,6 @@ class Template extends React.Component {
     let nav
 
     if (location.pathname === rootPath) {
-      console.log(children)
       nav = (
         <div id='nav'>
           <HomeNavbar />

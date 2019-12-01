@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import FeaturedArchive from './featured-archive'
-import $ from 'jquery'
-
+import TextLoop from 'react-text-loop'
 class Overlay extends React.Component {
   render() {
     return (
@@ -26,28 +25,24 @@ class Overlay extends React.Component {
                   <img src='/images/bhmp.png' alt='bhmp-logo' className='img' style={{maxWidth: '99px'}}/>
                   <h2>Bangladeshi Historical Memory Project</h2>
                 </div>
-                <p className='subheading padding-top-lite'>
+                <div className='subheading padding-top-lite'>
                   A digital archive <br />
                   documenting Bangladeshi
                   <br />
-                  <span id='js-rotating' style={{fontWeight: '700', lineHeight: '1.6'}}> history., art., people., culture., lives., stories., politics., revolution., rebellion.</span>
-                  <script>{(function($){
-                    $(function(){
-                        $('#js-rotating').Morphext({
-                            // The [in] animation type. Refer to Animate.css for a list of available animations.
-                            animation: 'fadeIn',
-                            // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-                            separator: ',',
-                            // The delay between the changing of each phrase in milliseconds.
-                            speed: 2000,
-                            complete: function () {
-                                // Called after the entrance animation is executed.
-                            }
-                        })
-                      })
-                    })(jQuery)}
-                  </script>
-                </p>
+                  <TextLoop>
+                    <span>history.</span>
+                    <span>art.</span>
+                    <span>people.</span>
+                    <span>culture.</span>
+                    <span>lives.</span>
+                    <span>stories.</span>
+                    <span>lives.</span>
+                    <span>stories.</span>
+                    <span>politics.</span>
+                    <span>revolution.</span>
+                    <span>rebellion.</span>
+                  </TextLoop>{''}
+                </div>
                 <br />
               </div>
             </div>

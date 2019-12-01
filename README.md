@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This is my 3.0 blog. It was built using GatsbyJS.
+This is our 2.0 site. It was built using GatsbyJS.
 
 This GatsbyJS single-page-application is virtualized in a Vagrant box, to be hosted on a Linode, integrated in CircleCI, tested with Jest BDD.
 
